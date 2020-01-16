@@ -1,1 +1,121 @@
-halo
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .w3-container {
+            padding: 0px;
+            ;
+        }
+
+        .cover {
+            width: 150px;
+            height: 150px;
+            float: left;
+            object-fit: cover;
+        }
+
+        .margin-bawah {
+            margin-bottom: 32px;
+        }
+
+        .besar {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 5;
+        }
+
+        .cover {
+            transition: -webkit-transform 0.25s ease;
+            transition: transform 0.25s ease;
+        }
+
+        .cover:active {
+            position: fixed;
+            margin-left: auto;
+            margin-right: auto;
+            left: 50%;
+            top: 50%;
+            object-fit: contain;
+            -webkit-transform: scale(5);
+            transform: scale(5);
+        }
+    </style>
+</head>
+
+<body class="w3-white">
+    <div class="w3-container w3-padding">
+        <h1>Fawaid Online Shop</h1>
+        <div class="w3-text-green">Whatsapp : +62 856-9401-3740</div>
+        <hr>
+        <div class="w3-padding w3-round w3-border margin-bawah">
+            <spna class="w3-large">Bismillah</spna><br>
+            Fadhol yg mau usaha,in syaa ALLOH bisa kami bantu untuk cara buatnya:<br>
+            #Teh tarik jely:hijau,exlusif,ekonomis<br>
+            #Es saribuah alami:biasa atau crimer<br>
+            #sempol ayam<br>
+            #tahu crispy(menyediakan racikan crispy)<br>
+            #fried chiken(bantu nyediakan tepung)<br>
+            Untuk wilayah Jawa bisa kami bantu langsung datang<br> atau kami yg kesana s&k berlaku,untuk yg di luar
+            pulau
+            Jawa bisa di musyawarahkan<br>
+            Untuk detail bisa wapri<br>
+            Baarokallahu fiikum
+        </div>
+        <div id="galery" class="w3-center w3-container margin-bawah"></div>
+        <div class="w3-padding w3-round w3-border w3-container">
+            جزاكم الله خيرا و بارك الله فيكم
+        </div>
+    </div>
+
+    <script>
+        var gambar = [
+            "https://drive.google.com/uc?id=1RpBjAx7zlIOz9h1IjzOkZ6BCci1pqh7k",
+            "https://drive.google.com/uc?id=1DOh9i13H47QYHmkV-L_N0yEc_W3raLZ3",
+            "https://drive.google.com/uc?id=12__wQTn5woP-i02yle96H4y13TpQ37bF",
+            "https://drive.google.com/uc?id=1_UGDRIsIwIoMalJtVqbAxmgJFPz0JdZI",
+            "https://drive.google.com/uc?id=1qLvZp0ML8XkonmHmQafWbQ-rWTkJlTOC",
+            "https://drive.google.com/uc?id=1uE4j-vAjjT5DrshMDbvlS9-YNGcZ_CeH",
+            "https://drive.google.com/uc?id=1z8b5TkLHnDFfO4l9AeYPzVH3KH6SJAbK",
+            "https://drive.google.com/uc?id=1kdTLFcgG3tBAviW2NZu2Dp5jWQSIeqbz",
+            "https://drive.google.com/uc?id=1ujL1bILGYc6o1Xmwh8WyXn5D6MbISEwU",
+            "https://drive.google.com/uc?id=1N6y2N_Ehqyeaq-ViajFo1Z7Uf_2f9CYs",
+            "https://drive.google.com/uc?id=1RlqcE8CKrQsuTBCchb7z1Ep9ZyNN3Lie",
+            "https://drive.google.com/uc?id=18jREViEs87UAXjjQmyL1NONkV5-qHsnF",
+            "https://drive.google.com/uc?id=1myPNWpvasGgG7tWfUFOZpbJzXtwY6WQz",
+            "https://drive.google.com/uc?id=13o3jlBXk7m4lBQqMwStJihqsRvBaIoXd",
+            "https://drive.google.com/uc?id=1KvT1gk6rp0Ioha9f_FsjEawpDXO5tqD0",
+            "https://drive.google.com/uc?id=1IzY4NmTWVOxQNiiH2Tct7D_q7yftAxJy",
+            "https://drive.google.com/uc?id=1oZN6IZ7W6O61AlA1J9EAS3MyzpGynZ5O",
+            "https://drive.google.com/uc?id=1m65Lg2DYZSRGvtIpUneEvWbfQv-sZZRe",
+            "https://drive.google.com/uc?id=1bgKmQ-CB6PWV2aoKxiuME_0y7bBHcXWC",
+            "https://drive.google.com/uc?id=1W2v0aNt6FjxuefSHPRGoJc8O_dQIQq2_",
+            "https://drive.google.com/uc?id=1FWnKnoLKJPOm3q5KPIRTC_J9dCoL2MXr",
+            "https://drive.google.com/uc?id=1UQfr11by7MxGSIiZ6WqMIzyNVAHcD50R",
+            "https://drive.google.com/uc?id=1KIF5O9ncjLSag-MpiFXv60wYdqRY1mGb",
+            "https://drive.google.com/uc?id=1JqF4_8LSQq4oyRXoKxO6gEuM4brtJ2d1",
+            "https://drive.google.com/uc?id=1DTHt17bEcalVgG53pzWflF5uVMmoQ3jn",
+            "https://drive.google.com/uc?id=1zwknx2D7xbXfRwF45tAx7V8nA2qTPs99",
+            "https://drive.google.com/uc?id=1fZVdxT8OU7jVH85e_mf6tCHpwrkjSstY",
+            "https://drive.google.com/uc?id=1ZqGpeOs9WP9Gp10taovkXFT7AIXQdUz9",
+            "https://drive.google.com/uc?id=1uQlHqg82UhY2ZMevKk0R1-bCfkSoPJJe",
+            "https://drive.google.com/uc?id=1IWYncUxvzR4-IFmyJ_E8fphvFL1K-Zwp"
+        ]
+        var gam = "";
+        for (var i = 0; i < gambar.length; i++) {
+            gam +=
+                `<img id="${i}" class="cover w3-center w3-border w3-border-white" onclick="tekan(this)" src="${gambar[i]}">`;
+        }
+        $("#galery").html(gam)
+
+        function tekan(e) {
+            e.class
+        }
+    </script>
+
+</body>
+
+</html>
